@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
     tools:context="jp.techacademy.yuuto.hasegawa.calcapp.MainActivity">
 
-    <TextView
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:id="@+id/editText2" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="add"
+        android:layout_below="@+id/editText2"
+        android:id="@+id/buttonAdd" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sub"
+        android:layout_toEndOf="@+id/buttonAdd"
+        android:layout_toRightOf="@+id/buttonAdd"
+        android:layout_alignTop="@+id/buttonAdd"
+        android:id="@+id/buttonSub" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mul"
+        android:layout_toEndOf="@+id/buttonSub"
+        android:layout_toRightOf="@+id/buttonSub"
+        android:layout_alignTop="@+id/buttonAdd"
+        android:id="@+id/buttonMul" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="div"
+        android:layout_toEndOf="@+id/buttonMul"
+        android:layout_toRightOf="@+id/buttonMul"
+        android:layout_alignTop="@+id/buttonAdd"
+        android:id="@+id/buttonDiv" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
