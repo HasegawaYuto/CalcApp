@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
+import android.text.InputType;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     EditText textVal1;
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         textVal1 = (EditText)findViewById(R.id.editText1);
         textVal2 = (EditText)findViewById(R.id.editText2);
+
+        textVal1.setInputType(InputType.TYPE_CLASS_NUMBER);
+        textVal2.setInputType(InputType.TYPE_CLASS_NUMBER);
     }
 
     @Override
